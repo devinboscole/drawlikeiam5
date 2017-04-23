@@ -1,0 +1,468 @@
+@font-face {
+    font-family: likefive;
+    src: url(assets/kindergarten.ttf);
+}
+
+body {
+  background-color: #ffd139;
+  margin: 0;
+    overflow:hidden;
+}
+
+#can {
+background-image: url();
+  background-color: white;
+cursor: crosshair;
+}
+
+nav {
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  font-size: 0;
+transform: translate(-50%, -50%);
+  text-align: center;
+  width: 80%;
+}
+
+button {
+    width: 60px;
+    height: 40px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+margin-left: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 8px
+}
+
+[data-tool=line_pencil] {
+    background-image: url(assets/button1.png);
+ background-color: #ffd139;
+        background-position: center;
+}
+
+[data-tool=line_pen] {
+ background-color: #ffd139;
+}
+
+[data-tool=line_marker] {
+        background-image: url(assets/button2.png);
+ background-color: #ffd139;
+        background-position: center;
+}
+
+[data-tool=line_crayon] {
+        background-image: url(assets/button3.png);
+ background-color: #ffd139;
+        background-position: center;
+}
+
+[data-tool=line_eraser] {
+        background-image: url(assets/button4.png);
+ background-color: #ffd139;
+        background-position: center;
+}
+
+[data-tool=line_clear] {
+        background-image: url(assets/button5.png);
+ background-color: #ffd139;
+        background-position: center;
+}
+
+[data-tool=line_stickers] {
+        background-image: url(assets/button6.png);
+ background-color: #ffd139;
+        background-position: center;
+}
+
+[data-tool=line_coloring] {
+        background-image: url(assets/button7.png);
+ background-color: #ffd139;
+        background-position: center;
+}
+
+[data-tool=line_thickness] {
+        background-image: url(assets/button9.png);
+ background-color: #ffd139;
+        background-position: center;
+}
+[data-tool=line_color] {
+        background-image: url(assets/button8.png);
+ background-color: #ffd139;
+        background-position: center;
+}
+
+[data-tool=line_restart] {
+        background-image: url(assets/button10.png);
+    background-position: center;
+ background-color: #ff274b;
+}
+
+#point {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin-left: -5px;
+  margin-top: -5px;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 100%;
+  display: none;
+}
+
+#thicknessoptions {
+    display: none; 
+top: 50%;
+    left: 50%; 
+    position: fixed;
+    transform: translate(-50%, -50%);
+}
+
+#coloroptions {
+    display: none; 
+    width: 1200px;
+top: 50%;
+    left: 50%; 
+    position: fixed;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#colormiddle {
+    margin: auto;
+}
+
+#coloring {
+    display: none; 
+top: 50%;
+    left: 50%; 
+    position: fixed;
+    transform: translate(-50%, -50%);
+}
+
+.colormargin {
+margin-left: 5px;
+}
+
+#black {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+#white {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+#purple {
+    width: 50px;
+    height: 50px;
+    background-color: #7302b5;
+    border-radius: 50%;
+        display: none;
+}
+
+#blue {
+    width: 50px;
+    height: 50px;
+    background-color: #1259d8;
+    border-radius: 50%;
+}
+
+#green {
+    width: 50px;
+    height: 50px;
+    background-color: #27ea4b;
+    border-radius: 50%;
+        display: none;
+}
+
+#yellow {
+    width: 50px;
+    height: 50px;
+    background-color: #fff927;
+    border-radius: 50%;
+        display: none;
+}
+
+#orange {
+    width: 50px;
+    height: 50px;
+    background-color: #ff9600;
+    border-radius: 50%;
+        display: none;
+}
+
+#red {
+    width: 50px;
+    height: 50px;
+    background-color: #ff1212;
+    border-radius: 50%;
+        display: none;
+}
+
+#pink {
+    width: 50px;
+    height: 50px;
+    background-color: #ff33b6;
+    border-radius: 50%;
+    display: none;
+}
+
+#thickness1 {
+        width: 50px;
+    height: 50px;
+    background-image: url(assets/thickness1.png);
+    background-color: black;
+    border-radius: 50%;
+}
+
+#thickness2 {
+            width: 50px;
+    height: 50px;
+        background-image: url(assets/thickness2.png);
+    background-color: black;
+    border-radius: 50%;
+    
+}
+
+#thickness3 {
+            width: 50px;
+    height: 50px;
+        background-image: url(assets/thickness3.png);
+    background-color: black;
+    border-radius: 50%;
+    
+}
+
+#coloring1 {
+            width: 50px;
+    height: 50px;
+    background-color: black;
+    border-radius: 50%;
+    
+}
+
+#coloring2 {
+            width: 50px;
+    height: 50px;
+    background-color: black;
+    border-radius: 50%;
+    
+}
+
+#coloring3 {
+            width: 80px;
+    height: 80px;
+    background-color: black;
+    border-radius: 50%;
+    
+}
+
+#coloring4 {
+            width: 80px;
+    height: 80px;
+    background-color: black;
+    border-radius: 50%;
+    
+}
+
+#screen2 {
+   display: none; 
+}
+
+#errors {
+    display: block;
+}
+
+.errormsg {
+        font-family: likefive;
+     font-size: 3em;
+        letter-spacing: -2px;
+    background: #ff274b;
+top: 50%;
+    left: 50%; 
+    position: fixed;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding-top: 50px;
+        padding-bottom: 40px;
+        padding-right: 50px;
+        padding-left: 50px;
+    border-radius: 10px;
+}
+
+.buddybutton1 {
+    width: 300px;
+    height: 250px;
+    background-image: url(assets/buddy2.png);
+    background-position: center;
+    background-color: #fff; /* Green */
+    border: none;
+    color: white;
+margin: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 8px
+}
+
+.buddybutton2 {
+    width: 300px;
+    height: 250px;
+        background-image: url(assets/buddy1.png);
+    background-position: center;
+    background-color: #fff; /* Green */
+    border: none;
+    color: white;
+margin: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 8px
+}
+
+.buddybutton3 {
+    width: 300px;
+    height: 250px;
+        background-image: url(assets/buddy3.png);
+    background-position: center;
+    background-color: #fff; /* Green */
+    border: none;
+    color: white;
+margin: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 8px
+}
+
+
+
+#screen1 {
+    width: 70%;
+    text-align: center;
+top: 50%;
+    left: 50%; 
+    position: fixed;
+    transform: translate(-50%, -50%);
+}
+/*
+
+.screen1-text {
+    text-align: center;
+}
+*/
+
+#sc1-header {
+        font-family: likefive;
+         font-size: 6em;
+        letter-spacing: -2px;
+    color: black;
+    text-align: center;
+}
+
+#sc1-subheader {
+        font-family: likefive;
+         font-size: 2.5em;
+        letter-spacing: -1px;
+    color: black;
+        text-align: center;
+}
+
+#restart {
+    
+}
+
+p {
+    margin: -0.2em;
+}
+
+#screen1b {
+    display: none;
+    width: 70%;
+    text-align: center;
+top: 50%;
+    left: 50%; 
+    position: fixed;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 100px;
+    border-radius: 8px;
+}
+
+#about {
+    width: 60px;
+    height: 60px;
+    background-color: #ff274b; /* Green */
+    border: none;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 8px
+    display: block;
+           font-family: likefive;
+         font-size: 2.5em;
+}
+
+.aboutback {
+    width: 60px;
+    height: 60px;
+    background-color: #ff274b; /* Green */
+    border: none;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 8px;
+    display: none;
+           font-family: likefive;
+         font-size: 2.5em;
+}
+
+/*prompts*/
+#prompts {
+    display: none; 
+}
+
+.word {
+        font-family: likefive;
+     font-size: 3em;
+        letter-spacing: -2px;
+    background: #ffd139;
+top: 50%;
+    left: 50%; 
+    position: fixed;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding-top: 50px;
+        padding-bottom: 40px;
+        padding-right: 50px;
+        padding-left: 50px;
+    border-radius: 10px;
+}
+
+#timer {
+       width: 100%;
+    height: 60px;
+    background-color: #ffd139;
+      position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+    
+}
