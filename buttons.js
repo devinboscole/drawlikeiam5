@@ -324,7 +324,7 @@ function countdown () {
 var dataURL = can.toDataURL();
             drawnimages.push ({ 
 imgBase64: dataURL, 
-    category: prompts[currentpromptindex]
+    category: prompts[currentpromptindex - 1]
   }) 
             ctx.clearRect(0, 0, can.width, can.height);
             
@@ -366,6 +366,7 @@ imgBase64: drawnimages [i].imgBase64,
   }
 }).done(function(o) {
   console.log('saved');
+  console.log(o);
     ctx.clearRect(0, 0, can.width, can.height);
   // If you want the file to be visible in the browser 
   // - please modify the callback in javascript. All you

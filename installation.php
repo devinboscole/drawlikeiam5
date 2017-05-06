@@ -2,12 +2,12 @@
 $timestamp = $_POST['timestamp'];
 //create an array and see if there is an img file then reads all of img files into the array
 $files = array();
-if ($handle = opendir('images')) {
+if ($handle = opendir('./images')) {
     while (false !== ($file = readdir($handle))) {
         if ($file != "." && $file != "..") {
-            $file_time = filemtime ($file);
+            $file_time = explode(".", explode("-", $file)[1])[0];
             if ($file_time > $timestamp) {
-                           $files[filemtime($file)] = $file;
+                  $files[$file_time] = $file;
             }
         }
     }
@@ -15,14 +15,13 @@ if ($handle = opendir('images')) {
 
     // sort
     krsort($files);
-    
 
     $length = min (220, count($files));
     if ($length > 0) {
         reset($files);
-$timestamp = key($files);  
+$timestamp = key($files);
     } 
-    echo json_encode (array('timestamp' => $timestamp, "array" =>(array_values (array_slice($files, 0, $length))));
+    echo json_encode (array('timestamp' => $timestamp, "array" =>(array_values (array_slice($files, 0, $length)))));
 ////    for ($x = 0; $x <= length; $x++) {
 //    echo "The number is: $x <br>";
 //} 
@@ -39,5 +38,5 @@ $timestamp = key($files);
 //           echo "<tr><td><input type=\"checkbox\" name=\"box[]\"></td><td><a href=\"$file\" target=\"_blank\">$file</a></td><td>$lastModified</td></tr>";
 //        }
 //    }
-//}
+}
 ?>

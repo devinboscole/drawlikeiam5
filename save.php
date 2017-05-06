@@ -7,7 +7,8 @@ $fileData = base64_decode($img);
 $category = $_POST['category'];
 $milliseconds = round(microtime(true) * 1000);
 //saves in an image folder
-$fileName = "images/"+$category+'-'+(string)$milliseconds+'.png';
+$fileName = './images/'.$category.'-'.$milliseconds.'.png';
 //string file name
+echo $fileName;
 file_put_contents($fileName, $fileData);
 ?>
