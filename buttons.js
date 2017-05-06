@@ -308,21 +308,8 @@ function showprompt (){
     }
 }
 
-//prompt msg on click makes dissapear
-document.getElementById ("prompts").onclick = function (){
-     document.getElementById ("prompts").style.display = "none";
-    wordstate = "ready";
-    switch_tool('line_pencil');
-    countdown ();
-    for (var button_i = 0;
-     button_i < buttons.length;
-     button_i += 1) {
-    buttons[button_i].style.display = "inline-block";
-}
-}
-
-var remainingprompt = 4; 
-
+var remainingprompt = 2; 
+var drawnimages = [];
 
 //execute this function every 1000 millisec then update the display
 var remainingtime = 5;
@@ -332,29 +319,60 @@ function countdown () {
         document.getElementById ("time-remaining").innerHTML = remainingtime;
         if (remainingtime == 0) {
             console.log ("done!");
-            clearInterval(interval);
-       
-            var dataURL = can.toDataURL();     
-            $.ajax({
-  type: "POST",
-  url: "save.php",
-  data: { 
-     imgBase64: dataURL
-  }
-}).done(function(o) {
-  console.log('saved'); 
-  // If you want the file to be visible in the browser 
-  // - please modify the callback in javascript. All you
-  // need is to return the url to the file, you just saved 
-  // and than put the image in your browser.
-});
+            clearInterval(interval); 
+//saves drawn images into an object that is being saved locally
+var dataURL = can.toDataURL();
+            drawnimages.push ({ 
+imgBase64: dataURL, 
+    category: prompts[currentpromptindex]
+  }) 
+            ctx.clearRect(0, 0, can.width, can.height);
             
             if (remainingprompt > 0) {
             wordstate = "start";
             showprompt ();
             remainingtime  = 5;
             remainingprompt -= 1;
+            } else {
+                document.getElementById ("endscreen").style.display = "block";
+                     document.getElementById ("timer").style.display = "none";
+                                   document.getElementById ("point").style.display = "none";
+                        for (var button_i = 0;
+     button_i < buttons.length;
+     button_i += 1) {
+    buttons[button_i].style.display = "none";
+                            document.getElementById ("endimage-1").src = drawnimages [0].imgBase64;
+                                                  document.getElementById ("endimage-2").src = drawnimages [1].imgBase64;
+                                                  document.getElementById ("endimage-3").src = drawnimages [2].imgBase64;
+}
             }
         }
     },1000);
 }
+
+document.getElementById ("end-cancel").onclick = function (){
+    location.reload();
+}
+
+document.getElementById ("end-submit").onclick = function (){
+   
+for (var i=0; i < 3; i++) {    
+    $.ajax({
+type: "POST",
+url: "save.php",
+data: { 
+imgBase64: drawnimages [i].imgBase64, 
+    category: drawnimages [i].category,
+  }
+}).done(function(o) {
+  console.log('saved');
+    ctx.clearRect(0, 0, can.width, can.height);
+  // If you want the file to be visible in the browser 
+  // - please modify the callback in javascript. All you
+  // need is to return the url to the file, you just saved 
+  // and than put the image in your browser.
+});
+}
+}
+
+

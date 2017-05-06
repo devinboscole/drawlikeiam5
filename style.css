@@ -466,3 +466,17 @@ top: 50%;
   left: 0;
     
 }
+
+#endscreen {
+    display: none;
+}
+
+#endimage-1 {
+    width: 200px;
+}
+#endimage-2{
+    width: 200px;
+}
+#endimage-3 {
+    width: 200px;
+}
