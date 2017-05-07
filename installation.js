@@ -27,8 +27,11 @@ timestamp:timestamp
   }
 }).done(function(o) {
   console.log(o);
-  timestamp = JSON.parse(o)["timestamp"];
-                updateimages (JSON.parse(o)["array"]);
+  var response = JSON.parse(o);
+  timestamp = response["timestamp"];
+  if (response["array"].length > 0) {
+    updateimages (response["array"]);
+  }
   // If you want the file to be visible in the browser 
   // - please modify the callback in javascript. All you
   // need is to return the url to the file, you just saved 

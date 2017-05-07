@@ -369,10 +369,10 @@ imgBase64: drawnimages [i].imgBase64,
 }).done(function(o) {
   console.log('saved');
   console.log(o);
-        submitcount +=1; 
+        submitcount +=1;
         if (submitcount == 3) {
-            document.getElementById ("confirmbox").display = "block";
-                        document.getElementById ("endscreen").display = "none";
+            document.getElementById ("confirmbox").style.display = "block";
+            document.getElementById ("endscreen").style.display = "none";
         } 
     ctx.clearRect(0, 0, can.width, can.height);
   // If you want the file to be visible in the browser 
@@ -383,7 +383,7 @@ imgBase64: drawnimages [i].imgBase64,
 }
 }
 
-document.getElementById ("endconfirm").onclick = function (){
+document.getElementById ("end-confirm").onclick = function (){
     location.reload();
 }
 
