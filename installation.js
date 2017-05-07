@@ -40,14 +40,18 @@ timestamp:timestamp
 
 function updateimages (images) {
     var imagelength = images.length;
-    for (var i = 0; i < imagecounter; i++) {
-        var sourceindex = imagecounter - i - 1; 
+    for (var i = 0; i < totalimage; i++) {
+        var sourceindex = totalimage - i - 1; 
         var desindex = sourceindex + imagelength;
         if (desindex < columns*rows) {
+            console.log(sourceindex + "->" + desindex);
             document.getElementById ("img-"+desindex).src =  document.getElementById ("img-"+sourceindex).src;
+        } else {
         }
     }
     for (var i = 0; i < imagelength; i++) {
+        console.log(images[i]);
         document.getElementById ("img-"+i).src = "images/"+images[i];
+        totalimage += 1;
     }
 }
