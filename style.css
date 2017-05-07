@@ -480,3 +480,7 @@ top: 50%;
 #endimage-3 {
     width: 200px;
 }
+
+#confirmbox {
+    display: none;
+}

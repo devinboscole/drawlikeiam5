@@ -354,6 +354,8 @@ document.getElementById ("end-cancel").onclick = function (){
     location.reload();
 }
 
+var submitcount = 0;
+
 document.getElementById ("end-submit").onclick = function (){
    
 for (var i=0; i < 3; i++) {    
@@ -367,6 +369,11 @@ imgBase64: drawnimages [i].imgBase64,
 }).done(function(o) {
   console.log('saved');
   console.log(o);
+        submitcount +=1; 
+        if (submitcount == 3) {
+            document.getElementById ("confirmbox").display = "block";
+                        document.getElementById ("endscreen").display = "none";
+        } 
     ctx.clearRect(0, 0, can.width, can.height);
   // If you want the file to be visible in the browser 
   // - please modify the callback in javascript. All you
@@ -376,4 +383,7 @@ imgBase64: drawnimages [i].imgBase64,
 }
 }
 
+document.getElementById ("endconfirm").onclick = function (){
+    location.reload();
+}
 
