@@ -1,10 +1,10 @@
 var can = document.getElementById('can'),
-  ctx = can.getContext('2d'),
+    ctx = can.getContext('2d'),
     isDrawing = false,
-  tools = {},
-  tool,
-  menu = document.getElementById('tools'),
-  scale = 0.5;
+    tools = {},
+    tool,
+    menu = document.getElementById('tools'),
+    scale = 0.5;
 
 can.width = window.innerWidth * 2;
 can.height = window.innerHeight * 2;
@@ -38,35 +38,36 @@ can.onclick = function (e) {
         tool.click (e);
     };
     document.getElementById ("errors").style.display = "none";
+    showprompt ();
+};
+can.onmousedown = function (e) {
     if (wordstate == "pending") {
         wordstate = "ready";
         switch_tool('line_pencil');
         countdown ();
-            for (var button_i = 0;
-     button_i < buttons.length;
-     button_i += 1) {
-    buttons[button_i].style.display = "inline-block";
-}
+        for (var button_i = 0;
+             button_i < buttons.length;
+             button_i += 1) {
+            buttons[button_i].style.display = "inline-block";
+        }
+        document.getElementById ("timer").style.display = "block";
     }
     document.getElementById ("prompts").style.display = "none";
-    showprompt ();
-};
-can.onmousedown = function (e) {
-    
+
     if (tool && tool.onmousedown) {
         tool.onmousedown (e);
     };
 };
 
 can.onmousemove = function (e) {
-      
+
     if (tool && tool.onmousemove) {
         tool.onmousemove (e);
     };
 };
 
 can.onmouseup = function (e) { 
-      
+
     if (tool && tool.onmouseup) {
         tool.onmouseup (e);
     };

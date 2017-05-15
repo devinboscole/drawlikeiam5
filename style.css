@@ -464,7 +464,28 @@ top: 50%;
   right: 0;
   bottom: 0;
   left: 0;
+    text-align: center;
+    display: none;
     
+}
+
+#timer-div {
+            display: flex;
+    align-items: center;
+    justify-content: center; 
+    height: 60px;
+}
+
+#single-word {
+        font-family: likefive;
+         font-size: 1.5em;
+    padding-right: 10px;
+}
+
+#time-remaining {
+        font-family: likefive;
+         font-size: 1.5em;
+        padding-right: 10px;
 }
 
 #endscreen {
@@ -483,4 +504,51 @@ top: 50%;
 
 #confirmbox {
     display: none;
+}
+
+* {
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+#done {
+    outline: none;
+}
+
+
+#endscreen {
+    width: 100%;
+    text-align: center;
+top: 50%;
+    left: 50%; 
+    position: fixed;
+    transform: translate(-50%, -50%);
+  background-color: #ffd139;
+}
+
+#endscreen {
+height: 100%;
+  background-color: #ffd139;
+}
+
+#endimage-1{
+    background-color: white;
+}
+
+#endimage-2{
+    background-color: white;
+}
+#endimage-3{
+    background-color: white;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.redtext {
+    color: red; 
 }

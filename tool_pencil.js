@@ -28,13 +28,17 @@ ctx.lineWidth = thickness;
 ctx.strokeStyle = color;
   isDrawing = true;
   //cursoroffset(e.offsetX/scale, e.offsetY/scale); 
-  ctx.moveTo((mouse_x + offset_x)/scale, (mouse_y + offset_y)/scale);
+//  ctx.moveTo((mouse_x + offset_x)/scale, (mouse_y + offset_y)/scale);
+    ctx.moveTo((parseInt(point.style.left))/scale, parseInt(point.style.top)/scale);
 };
 
 tools.line_pencil.onmousemove = function (e) {
   if (isDrawing) {
    // ctx.lineTo(e.offsetX/scale, e.offsetY/scale);
-      ctx.lineTo((mouse_x + offset_x)/scale, (mouse_y + offset_y)/scale);
+//    console.log((mouse_x + offset_x)/scale);
+//    console.log((parseInt(point.style.left))/scale);
+//      ctx.lineTo((mouse_x + offset_x)/scale, (mouse_y + offset_y)/scale);
+      ctx.lineTo((parseInt(point.style.left))/scale, parseInt(point.style.top)/scale);
       //console.log(e.offsetX/scale);
       //console.log(e.offsetY/scale);
       //console.log(e.offsetX/scale - x);

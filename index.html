@@ -28,7 +28,7 @@
                 <br>
                   <span id="sc1-subheader"><p>You are five again with shitty drawing skills. Use this tool to create terrible drawings worthy of being hung on your parents' fridge. Show them what a special snowflake you are and relive a simpler time when you are not burdened by the reality of death--a faith that awaits us all.</p></span>
     </div>
-      
+      <div id=end>
       <div id="endscreen">
            <span id="end-header"><p>You're a star!</p></span>
           <br>
@@ -38,9 +38,10 @@
                  <img id="endimage-2">
                 <img id="endimage-3">
           </div>
-           <button class="end-cancel" id="end-cancel"></button>
-           <button class="end-submit" id="end-submit"></button>
+           <button class="end-cancel" id="end-cancel">HOME</button>
+           <button class="end-submit" id="end-submit">SUBMIT</button>
           <br>
+      </div>
       </div>
           <div id="confirmbox">
           <span id="end-confirm-text"><p>All your drawings have been submitted.</p></span>
@@ -79,7 +80,7 @@
       </div>  
       
       <div id="errors">
-          <span class="errormsg">You will have 2 minutes to draw 5 pictures. Draw to the best of your ability.</span>
+          <span class="errormsg">You will have 1 minute to draw 3 pictures. Draw to the best of your ability.</span>
           </div>
       
                 <div id="prompts">
@@ -87,12 +88,16 @@
           </div>
           
         <div id="timer">
+            <div id="timer-div">
             <span id="single-word"></span>
             <span id="time-remaining"></span>
+                <button id="done">DONE</button>
+            </div>
           </div>  
     <canvas id="can"></canvas>
     <div id="point"></div>
     <nav id="tools"></nav>
+             <script src="jquery-3.2.1.min.js"></script>
     <script src="surface.js"></script>
 <!--point.js contains point related functions-->
     <script src="point.js"></script>
@@ -105,7 +110,6 @@
     <script src="tool_thickness.js"></script>
     <script src="tool_restart.js"></script>
     <script src="buttons.js"></script>
-    <script src="jquery-3.2.1.min.js"></script>
       </div>
   </body>
 </html>
