@@ -456,10 +456,12 @@ document.getElementById ("prompts").onclick = function (){
 
 document.getElementById ("td-1").onclick = function (){
     console.log ("hello");
+    sendajax ("cat");
 //    window.location.href = "http://stackoverflow.com";
 }
 
 document.getElementById ("td-2").onclick = function (){
+        sendajax ("nonexistencasfasdfads");
 }
 
 document.getElementById ("td-3").onclick = function (){
