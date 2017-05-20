@@ -15,7 +15,7 @@ window.onmousemove = function (e) {
 }
 
 
-var thresholddrawing = 0.01; 
+var thresholddrawing = 0.001; 
 var stepcounts = 0; 
 var stepthreshold = 5; 
 var stepinterval; 

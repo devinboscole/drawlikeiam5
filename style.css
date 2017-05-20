@@ -109,7 +109,7 @@ margin-left: 10px;
   margin-top: -5px;
   width: 10px;
   height: 10px;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.05);
   border-radius: 100%;
   display: none;
 }
@@ -443,7 +443,7 @@ top: 50%;
         font-family: likefive;
      font-size: 3em;
         letter-spacing: -2px;
-    background: #ffd139;
+    background: #399bff;
 top: 50%;
     left: 50%; 
     position: fixed;
@@ -516,6 +516,7 @@ top: 50%;
 
 #done {
     outline: none;
+     font-family: likefive;
 }
 
 
@@ -529,9 +530,10 @@ top: 50%;
   background-color: #ffd139;
 }
 
-#endscreen {
-height: 100%;
-  background-color: #ffd139;
+#end {
+    display: none;
+    height: 100%;
+    background-color: #ffd139;
 }
 
 #endimage-1{
@@ -552,3 +554,27 @@ height: 100%;
 .redtext {
     color: red; 
 }
+
+#end-cancel {
+     font-family: likefive;
+}
+
+#end-submit {
+     font-family: likefive;
+}
+
+#end-confirm {
+     font-family: likefive;
+}
+
+#imgtable {
+        margin-left:auto; 
+    margin-right:auto;
+        text-align: center;
+         font-family: likefive;
+}
+
+#refscreen {
+    display: none;
+}
+

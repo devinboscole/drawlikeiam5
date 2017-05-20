@@ -1,115 +1,144 @@
 <html>
-  <head>
-   <title>Draw Like I'm Five</title>
-    <link rel="icon" href="assets/icon.gif" type="image/gif" sizes="16x16">
-   <link rel="stylesheet" href="style.css">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-            <button class="about" id="about">?</button>
-            <button class="aboutback" id="aboutback">X</button>
+    <head>
+        <title>Draw Like I'm Five</title>
+        <link rel="icon" href="assets/icon.gif" type="image/gif" sizes="16x16">
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <button class="about" id="about">?</button>
+        <button class="aboutback" id="aboutback">X</button>
 
-      <div id="screen1">
-<!--          <div class="screen1-text">-->
-    <span id="sc1-header"><p>Draw Like I Am Five</p></span>
-          <br>
-          <span id="sc1-subheader"><p>choose a buddy</p></span>
-<!--              <div>-->
-          <br>
-      <button class="buddybutton1" id="sc1-button1"></button>
-    <button class="buddybutton2" id="sc1-button2"></button>
-    <button class="buddybutton3" id="sc1-button3"></button>
-    </div>
-    
-            <div id="screen1b">
-<!--          <div class="screen1-text">-->
-    <span id="sc1-header"><p>About</p></span>
-                <br>
-                <br>
-                  <span id="sc1-subheader"><p>You are five again with shitty drawing skills. Use this tool to create terrible drawings worthy of being hung on your parents' fridge. Show them what a special snowflake you are and relive a simpler time when you are not burdened by the reality of death--a faith that awaits us all.</p></span>
-    </div>
-      <div id=end>
-      <div id="endscreen">
-           <span id="end-header"><p>You're a star!</p></span>
-          <br>
-                         <span id="end-para"><p>All of these drawings are amazing.</p></span>
-          <div id="endimages">      
-          <img id="endimage-1">
-                 <img id="endimage-2">
-                <img id="endimage-3">
-          </div>
-           <button class="end-cancel" id="end-cancel">HOME</button>
-           <button class="end-submit" id="end-submit">SUBMIT</button>
-          <br>
-      </div>
-      </div>
-          <div id="confirmbox">
-          <span id="end-confirm-text"><p>All your drawings have been submitted.</p></span>
-                  <button class="end-confirm" id="end-confirm"></button>
-          </div>
-      
-      
-      <div id="screen2">
-    <div id="thicknessoptions">
-        <button id="thickness1" class="colormargin"></button>
-        <button id="thickness2" class="colormargin"></button>
-        <button id="thickness3" class="colormargin"></button>
-      </div>
-      
-    <div id="coloroptions">
-        <div id="colormiddle">
-        
-        <button id="black" class="colormargin"></button>
-        <button id="white" class="colormargin"></button>
-        <button id="purple" class="colormargin"></button>
-        <button id="blue" class="colormargin"></button>
-        <button id="green" class="colormargin"></button>
-        <button id="yellow" class="colormargin"></button>
-        <button id="orange" class="colormargin"></button>
-        <button id="red" class="colormargin"></button>
-        <button id="pink" class="colormargin"></button>
+        <div id="screen1">
+            <!--          <div class="screen1-text">-->
+            <span id="sc1-header"><p>Draw Like I Am Five</p></span>
+            <br>
+            <span id="sc1-subheader"><p>choose a buddy</p></span>
+            <!--              <div>-->
+            <br>
+            <button class="buddybutton1" id="sc1-button1"></button>
+            <button class="buddybutton2" id="sc1-button2"></button>
+            <button class="buddybutton3" id="sc1-button3"></button>
         </div>
-      
-      </div>  
-      
-    <div id="coloring">
-        <button id="coloring1" class="colormargin"><b>BARNEY</b></button>
-        <button id="coloring2" class="colormargin"><b>POH</b></button>
-        <button id="coloring3" class="colormargin"><b>GEORGE</b></button>
-        <button id="coloring4" class="colormargin"><b>KITTY</b></button>
-      </div>  
-      
-      <div id="errors">
-          <span class="errormsg">You will have 1 minute to draw 3 pictures. Draw to the best of your ability.</span>
-          </div>
-      
-                <div id="prompts">
-          <span class="word"></span>
-          </div>
-          
-        <div id="timer">
-            <div id="timer-div">
-            <span id="single-word"></span>
-            <span id="time-remaining"></span>
-                <button id="done">DONE</button>
+
+        <div id="screen1b">
+            <!--          <div class="screen1-text">-->
+            <span id="sc1-header"><p>About</p></span>
+            <br>
+            <br>
+            <span id="sc1-subheader"><p>You are five again with shitty drawing skills. Use this tool to create terrible drawings worthy of being hung on your parents' fridge. Show them what a special snowflake you are and relive a simpler time when you are not burdened by the reality of death--a faith that awaits us all.</p></span>
+        </div>
+        <div id="end">
+            <div id="endscreen">
+                <span id="end-header"><p>You're a star!</p></span>
+                <br>
+                <span id="end-para"><p>All of these drawings are amazing.</p></span>
+                <div id="endimages"> 
+                    <table id="imgtable"><tr>       <td id="td-1"><img id="endimage-1"></td>
+                        <td id="td-2"><img id="endimage-2"></td>
+                        <td id="td-3"><img id="endimage-3"></td>
+                        </tr>
+
+
+                        <tr>       <td><span id="imgcap-1"></span></td>
+                            <td><span id="imgcap-2"></span></td>
+                            <td><span id="imgcap-3"></span></td>
+                        </tr>
+
+                    </table>
+                </div>
+                <button class="end-cancel" id="end-cancel">HOME</button>
+                <button class="end-submit" id="end-submit">SUBMIT</button>
+                <br>
             </div>
-          </div>  
-    <canvas id="can"></canvas>
-    <div id="point"></div>
-    <nav id="tools"></nav>
-             <script src="jquery-3.2.1.min.js"></script>
-    <script src="surface.js"></script>
-<!--point.js contains point related functions-->
-    <script src="point.js"></script>
-    <script src="tool_pencil.js"></script>
-    <script src="tool_marker.js"></script>
-    <script src="tool_crayon.js"></script>
-    <script src="tool_eraser.js"></script>
-    <script src="tool_clear.js"></script>
-    <script src="tool_color.js"></script>
-    <script src="tool_thickness.js"></script>
-    <script src="tool_restart.js"></script>
-    <script src="buttons.js"></script>
-      </div>
-  </body>
+        </div>
+        <div id="confirmbox">
+            <span id="end-confirm-text"><p>All your drawings have been submitted.</p></span>
+            <button class="end-confirm" id="end-confirm"></button>
+        </div>
+        
+<!--    screen for reference images -->
+        <div id="refscreen">
+                       <span id="end-header"><p>Previously drawn images for ref!</p></span>
+                <br>
+             <table id="reftable"><tr>       <td id="ref-td-1"><img id="refimage-1"></td>
+                        <td id="ref-td-2"><img id="refimage-2"></td>
+                        <td id="ref-td-3"><img id="refimage-3"></td>
+                        </tr>
+
+
+                        <tr>       <td><img id="refimage-4"></td>
+                            <td><img id="refimage-5"></td>
+                            <td><img id="refimage-6"></td>
+                        </tr>
+
+                    </table>
+             <button class="ref-back" id="ref-back">BACK</button>
+        
+        </div>
+
+
+        <div id="screen2">
+            <div id="thicknessoptions">
+                <button id="thickness1" class="colormargin"></button>
+                <button id="thickness2" class="colormargin"></button>
+                <button id="thickness3" class="colormargin"></button>
+            </div>
+
+            <div id="coloroptions">
+                <div id="colormiddle">
+
+                    <button id="black" class="colormargin"></button>
+                    <button id="white" class="colormargin"></button>
+                    <button id="purple" class="colormargin"></button>
+                    <button id="blue" class="colormargin"></button>
+                    <button id="green" class="colormargin"></button>
+                    <button id="yellow" class="colormargin"></button>
+                    <button id="orange" class="colormargin"></button>
+                    <button id="red" class="colormargin"></button>
+                    <button id="pink" class="colormargin"></button>
+                </div>
+
+            </div>  
+
+            <div id="coloring">
+                <button id="coloring1" class="colormargin"><b>BARNEY</b></button>
+                <button id="coloring2" class="colormargin"><b>POH</b></button>
+                <button id="coloring3" class="colormargin"><b>GEORGE</b></button>
+                <button id="coloring4" class="colormargin"><b>KITTY</b></button>
+            </div>  
+
+            <div id="errors">
+                <span class="errormsg">You will have 1 minute to draw 3 pictures. Draw to the best of your ability.</span>
+            </div>
+
+            <div id="prompts">
+                <span class="word"></span>
+            </div>
+
+            <div id="timer">
+                <div id="timer-div">
+                    <span id="single-word"></span>
+                    <span id="time-remaining"></span>
+                    <button id="done">DONE</button>
+                </div>
+            </div>  
+            <canvas id="can"></canvas>
+            <div id="point"></div>
+            <nav id="tools"></nav>
+            <script src="jquery-3.2.1.min.js"></script>
+            <script src="surface.js"></script>
+            <!--point.js contains point related functions-->
+            <script src="point.js"></script>
+            <script src="tool_pencil.js"></script>
+            <script src="tool_marker.js"></script>
+            <script src="tool_crayon.js"></script>
+            <script src="tool_eraser.js"></script>
+            <script src="tool_clear.js"></script>
+            <script src="tool_color.js"></script>
+            <script src="tool_thickness.js"></script>
+            <script src="tool_restart.js"></script>
+            <script src="buttons.js"></script>
+        </div>
+    </body>
 </html>

@@ -307,7 +307,7 @@ var prompts = shuffle(["fish", "cat", "hat", "rat", "dog", "bird", "water", "shi
 console.log (prompts);
 
 var currentpromptindex = 0;
-var startremainingtime = 5; 
+var startremainingtime = 20; 
 
 function showprompt (){
     if (wordstate == "start") {
@@ -348,9 +348,9 @@ function countdown () {
             $('#time-remaining').removeClass('redtext');
             save ();
         } else if (remainingtime == blinkthreshold) {
-                        $('#time-remaining').addClass('redtext');
+            $('#time-remaining').addClass('redtext');
             blinkinterval = setInterval (function () {
-                       $('#time-remaining').toggleClass('hide');
+                $('#time-remaining').toggleClass('hide');
             }, 100);
         }
     },1000);
@@ -375,15 +375,24 @@ function save () {
         remainingprompt -= 1;
     } else {
         document.getElementById ("endscreen").style.display = "block";
+
+
+        document.getElementById ("end").style.display = "block";
+
         document.getElementById ("point").style.display = "none";
         for (var button_i = 0;
              button_i < buttons.length;
              button_i += 1) {
             buttons[button_i].style.display = "none";
-            document.getElementById ("endimage-1").src = drawnimages [0].imgBase64;
-            document.getElementById ("endimage-2").src = drawnimages [1].imgBase64;
-            document.getElementById ("endimage-3").src = drawnimages [2].imgBase64;
+
         }
+        document.getElementById ("endimage-1").src = drawnimages [0].imgBase64;
+        document.getElementById ("endimage-2").src = drawnimages [1].imgBase64;
+        document.getElementById ("endimage-3").src = drawnimages [2].imgBase64;
+
+        document.getElementById ("imgcap-1").innerHTML = drawnimages [0].category;
+        document.getElementById ("imgcap-2").innerHTML = drawnimages [1].category;
+        document.getElementById ("imgcap-3").innerHTML = drawnimages [2].category;
         document.getElementById ("errors").style.display = "none";
     }
 }
@@ -411,6 +420,7 @@ document.getElementById ("end-submit").onclick = function (){
             if (submitcount == 3) {
                 document.getElementById ("confirmbox").style.display = "block";
                 document.getElementById ("endscreen").style.display = "none";
+                document.getElementById ("end").style.display = "none";
             } 
             ctx.clearRect(0, 0, can.width, can.height);
             // If you want the file to be visible in the browser 
@@ -429,5 +439,60 @@ document.getElementById ("done").onclick = function (){
     save ();
 }
 
+document.getElementById ("prompts").onclick = function (){
+    document.getElementById ("prompts").style.display = "none";
+    if (wordstate == "pending") {
+        wordstate = "ready";
+        switch_tool('line_pencil');
+        countdown ();
+        for (var button_i = 0;
+             button_i < buttons.length;
+             button_i += 1) {
+            buttons[button_i].style.display = "inline-block";
+        }
+        document.getElementById ("timer").style.display = "block";
+    }
+}
 
+document.getElementById ("td-1").onclick = function (){
+    console.log ("hello");
+//    window.location.href = "http://stackoverflow.com";
+}
 
+document.getElementById ("td-2").onclick = function (){
+}
+
+document.getElementById ("td-3").onclick = function (){
+}
+
+function sendajax (category) {
+     $.ajax({
+            type: "POST",
+            url: "ref.php",
+            data: { 
+                category: category,
+            }
+        }).done(function(o) {
+            console.log('refed');
+             document.getElementById ("endscreen").style.display = "none";
+         document.getElementById ("refscreen").style.display = "block";
+//             ask the backend for 6 images  and the backend populate a reply with an object "o" which contains the 6 latest images
+         var response = JSON.parse(o);
+  if (response["array"].length > 0) {
+    updateimages (response["array"]);
+  }
+        });
+}
+
+function updateimages (images) {
+     var imagelength = images.length;
+    for (var i = 0; i < imagelength; i++) {
+        console.log(images[i]);
+        document.getElementById ("refimage-"+i).src = "images/"+images[i];
+    }
+}
+
+document.getElementById ("ref-back").onclick = function (){
+                 document.getElementById ("endscreen").style.display = "block";
+         document.getElementById ("refscreen").style.display = "none";
+}
