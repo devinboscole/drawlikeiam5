@@ -455,16 +455,17 @@ document.getElementById ("prompts").onclick = function (){
 }
 
 document.getElementById ("td-1").onclick = function (){
-    console.log ("hello");
-    sendajax ("cat");
+//    console.log ("ref images recieved");
+    sendajax (drawnimages [0].category);
 //    window.location.href = "http://stackoverflow.com";
 }
 
 document.getElementById ("td-2").onclick = function (){
-        sendajax ("nonexistencasfasdfads");
+        sendajax (drawnimages [1].category);
 }
 
 document.getElementById ("td-3").onclick = function (){
+        sendajax (drawnimages [2].category);
 }
 
 function sendajax (category) {
@@ -478,6 +479,7 @@ function sendajax (category) {
             console.log('refed');
              document.getElementById ("end").style.display = "none";
          document.getElementById ("ref").style.display = "block";
+                  document.getElementById ("refword").innerHTML = category;
 //             ask the backend for 6 images  and the backend populate a reply with an object "o" which contains the 6 latest images
          var response = JSON.parse(o);
   if (response["array"].length > 0) {
