@@ -497,4 +497,7 @@ function updateimages (images) {
 document.getElementById ("ref-back").onclick = function (){
                  document.getElementById ("end").style.display = "block";
          document.getElementById ("refscreen").style.display = "none";
+        for (var i = 0; i < 6; i++) {
+        document.getElementById ("refimage-"+i).src = "";
+    }
 }

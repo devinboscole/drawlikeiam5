@@ -574,9 +574,6 @@ top: 50%;
          font-family: likefive;
 }
 
-#refscreen {
-    display: none;
-}
 
 #refimage-0 {
     width: 200px;
@@ -602,4 +599,19 @@ top: 50%;
     width: 200px;
 }
 
+#refscreen {
+    width: 100%;
+    text-align: center;
+top: 50%;
+    left: 50%; 
+    position: fixed;
+    transform: translate(-50%, -50%);
+  background-color: #ffd139;
+}
+
+#ref {
+    display: none;
+    height: 100%;
+    background-color: #ffd139;
+}
 
