@@ -476,7 +476,7 @@ function sendajax (category) {
             }
         }).done(function(o) {
             console.log('refed');
-             document.getElementById ("endscreen").style.display = "none";
+             document.getElementById ("end").style.display = "none";
          document.getElementById ("refscreen").style.display = "block";
 //             ask the backend for 6 images  and the backend populate a reply with an object "o" which contains the 6 latest images
          var response = JSON.parse(o);
@@ -495,6 +495,6 @@ function updateimages (images) {
 }
 
 document.getElementById ("ref-back").onclick = function (){
-                 document.getElementById ("endscreen").style.display = "block";
+                 document.getElementById ("end").style.display = "block";
          document.getElementById ("refscreen").style.display = "none";
 }
