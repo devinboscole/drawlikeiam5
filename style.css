@@ -4,25 +4,25 @@
 }
 
 body {
-  background-color: #ffd139;
-  margin: 0;
+    background-color: #ffd139;
+    margin: 0;
     overflow:hidden;
 }
 
 #can {
-background-image: url();
-  background-color: white;
-cursor: crosshair;
+    background-image: url();
+    background-color: white;
+    cursor: crosshair;
 }
 
 nav {
-  position: fixed;
-  top: 5%;
-  left: 50%;
-  font-size: 0;
-transform: translate(-50%, -50%);
-  text-align: center;
-  width: 80%;
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    font-size: 0;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
 }
 
 button {
@@ -31,7 +31,7 @@ button {
     background-color: #4CAF50; /* Green */
     border: none;
     color: white;
-margin-left: 10px;
+    margin-left: 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -40,83 +40,83 @@ margin-left: 10px;
 
 [data-tool=line_pencil] {
     background-image: url(assets/button1.png);
- background-color: #ffd139;
-        background-position: center;
+    background-color: #ffd139;
+    background-position: center;
 }
 
 [data-tool=line_pen] {
- background-color: #ffd139;
+    background-color: #ffd139;
 }
 
 [data-tool=line_marker] {
-        background-image: url(assets/button2.png);
- background-color: #ffd139;
-        background-position: center;
+    background-image: url(assets/button2.png);
+    background-color: #ffd139;
+    background-position: center;
 }
 
 [data-tool=line_crayon] {
-        background-image: url(assets/button3.png);
- background-color: #ffd139;
-        background-position: center;
+    background-image: url(assets/button3.png);
+    background-color: #ffd139;
+    background-position: center;
 }
 
 [data-tool=line_eraser] {
-        background-image: url(assets/button4.png);
- background-color: #ffd139;
-        background-position: center;
+    background-image: url(assets/button4.png);
+    background-color: #ffd139;
+    background-position: center;
 }
 
 [data-tool=line_clear] {
-        background-image: url(assets/button5.png);
- background-color: #ffd139;
-        background-position: center;
+    background-image: url(assets/button5.png);
+    background-color: #ffd139;
+    background-position: center;
 }
 
 [data-tool=line_stickers] {
-        background-image: url(assets/button6.png);
- background-color: #ffd139;
-        background-position: center;
+    background-image: url(assets/button6.png);
+    background-color: #ffd139;
+    background-position: center;
 }
 
 [data-tool=line_coloring] {
-        background-image: url(assets/button7.png);
- background-color: #ffd139;
-        background-position: center;
+    background-image: url(assets/button7.png);
+    background-color: #ffd139;
+    background-position: center;
 }
 
 [data-tool=line_thickness] {
-        background-image: url(assets/button9.png);
- background-color: #ffd139;
-        background-position: center;
+    background-image: url(assets/button9.png);
+    background-color: #ffd139;
+    background-position: center;
 }
 [data-tool=line_color] {
-        background-image: url(assets/button8.png);
- background-color: #ffd139;
-        background-position: center;
+    background-image: url(assets/button8.png);
+    background-color: #ffd139;
+    background-position: center;
 }
 
 [data-tool=line_restart] {
-        background-image: url(assets/button10.png);
+    background-image: url(assets/button10.png);
     background-position: center;
- background-color: #ff274b;
+    background-color: #ff274b;
 }
 
 #point {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  margin-left: -5px;
-  margin-top: -5px;
-  width: 10px;
-  height: 10px;
-  background-color: rgba(0, 0, 0, 0.05);
-  border-radius: 100%;
-  display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin-left: -5px;
+    margin-top: -5px;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 100%;
+    display: none;
 }
 
 #thicknessoptions {
     display: none; 
-top: 50%;
+    top: 50%;
     left: 50%; 
     position: fixed;
     transform: translate(-50%, -50%);
@@ -125,7 +125,7 @@ top: 50%;
 #coloroptions {
     display: none; 
     width: 1200px;
-top: 50%;
+    top: 50%;
     left: 50%; 
     position: fixed;
     transform: translate(-50%, -50%);
@@ -138,14 +138,14 @@ top: 50%;
 
 #coloring {
     display: none; 
-top: 50%;
+    top: 50%;
     left: 50%; 
     position: fixed;
     transform: translate(-50%, -50%);
 }
 
 .colormargin {
-margin-left: 5px;
+    margin-left: 5px;
 }
 
 #black {
@@ -168,7 +168,7 @@ margin-left: 5px;
     height: 50px;
     background-color: #7302b5;
     border-radius: 50%;
-        display: none;
+    display: none;
 }
 
 #blue {
@@ -183,7 +183,7 @@ margin-left: 5px;
     height: 50px;
     background-color: #27ea4b;
     border-radius: 50%;
-        display: none;
+    display: none;
 }
 
 #yellow {
@@ -191,7 +191,7 @@ margin-left: 5px;
     height: 50px;
     background-color: #fff927;
     border-radius: 50%;
-        display: none;
+    display: none;
 }
 
 #orange {
@@ -199,7 +199,7 @@ margin-left: 5px;
     height: 50px;
     background-color: #ff9600;
     border-radius: 50%;
-        display: none;
+    display: none;
 }
 
 #red {
@@ -207,7 +207,7 @@ margin-left: 5px;
     height: 50px;
     background-color: #ff1212;
     border-radius: 50%;
-        display: none;
+    display: none;
 }
 
 #pink {
@@ -219,7 +219,7 @@ margin-left: 5px;
 }
 
 #thickness1 {
-        width: 50px;
+    width: 50px;
     height: 50px;
     background-image: url(assets/thickness1.png);
     background-color: black;
@@ -227,57 +227,57 @@ margin-left: 5px;
 }
 
 #thickness2 {
-            width: 50px;
+    width: 50px;
     height: 50px;
-        background-image: url(assets/thickness2.png);
+    background-image: url(assets/thickness2.png);
     background-color: black;
     border-radius: 50%;
-    
+
 }
 
 #thickness3 {
-            width: 50px;
+    width: 50px;
     height: 50px;
-        background-image: url(assets/thickness3.png);
+    background-image: url(assets/thickness3.png);
     background-color: black;
     border-radius: 50%;
-    
+
 }
 
 #coloring1 {
-            width: 50px;
+    width: 50px;
     height: 50px;
     background-color: black;
     border-radius: 50%;
-    
+
 }
 
 #coloring2 {
-            width: 50px;
+    width: 50px;
     height: 50px;
     background-color: black;
     border-radius: 50%;
-    
+
 }
 
 #coloring3 {
-            width: 80px;
+    width: 80px;
     height: 80px;
     background-color: black;
     border-radius: 50%;
-    
+
 }
 
 #coloring4 {
-            width: 80px;
+    width: 80px;
     height: 80px;
     background-color: black;
     border-radius: 50%;
-    
+
 }
 
 #screen2 {
-   display: none; 
+    display: none; 
 }
 
 #errors {
@@ -285,19 +285,19 @@ margin-left: 5px;
 }
 
 .errormsg {
-        font-family: likefive;
-     font-size: 3em;
-        letter-spacing: -2px;
+    font-family: likefive;
+    font-size: 3em;
+    letter-spacing: -2px;
     background: #ff274b;
-top: 50%;
+    top: 50%;
     left: 50%; 
     position: fixed;
     transform: translate(-50%, -50%);
     text-align: center;
     padding-top: 50px;
-        padding-bottom: 40px;
-        padding-right: 50px;
-        padding-left: 50px;
+    padding-bottom: 40px;
+    padding-right: 50px;
+    padding-left: 50px;
     border-radius: 10px;
 }
 
@@ -309,7 +309,7 @@ top: 50%;
     background-color: #fff; /* Green */
     border: none;
     color: white;
-margin: 20px;
+    margin: 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -319,12 +319,12 @@ margin: 20px;
 .buddybutton2 {
     width: 300px;
     height: 250px;
-        background-image: url(assets/buddy1.png);
+    background-image: url(assets/buddy1.png);
     background-position: center;
     background-color: #fff; /* Green */
     border: none;
     color: white;
-margin: 20px;
+    margin: 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -334,12 +334,12 @@ margin: 20px;
 .buddybutton3 {
     width: 300px;
     height: 250px;
-        background-image: url(assets/buddy3.png);
+    background-image: url(assets/buddy3.png);
     background-position: center;
     background-color: #fff; /* Green */
     border: none;
     color: white;
-margin: 20px;
+    margin: 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -351,7 +351,7 @@ margin: 20px;
 #screen1 {
     width: 70%;
     text-align: center;
-top: 50%;
+    top: 50%;
     left: 50%; 
     position: fixed;
     transform: translate(-50%, -50%);
@@ -359,28 +359,28 @@ top: 50%;
 /*
 
 .screen1-text {
-    text-align: center;
+text-align: center;
 }
 */
 
 #sc1-header {
-        font-family: likefive;
-         font-size: 6em;
-        letter-spacing: -2px;
+    font-family: likefive;
+    font-size: 6em;
+    letter-spacing: -2px;
     color: black;
     text-align: center;
 }
 
 #sc1-subheader {
-        font-family: likefive;
-         font-size: 2.5em;
-        letter-spacing: -1px;
+    font-family: likefive;
+    font-size: 2.5em;
+    letter-spacing: -1px;
     color: black;
-        text-align: center;
+    text-align: center;
 }
 
 #restart {
-    
+
 }
 
 p {
@@ -391,7 +391,7 @@ p {
     display: none;
     width: 70%;
     text-align: center;
-top: 50%;
+    top: 50%;
     left: 50%; 
     position: fixed;
     transform: translate(-50%, -50%);
@@ -412,9 +412,9 @@ top: 50%;
     text-decoration: none;
     display: inline-block;
     border-radius: 8px
-    display: block;
-           font-family: likefive;
-         font-size: 2.5em;
+        display: block;
+    font-family: likefive;
+    font-size: 2.5em;
 }
 
 .aboutback {
@@ -430,8 +430,8 @@ top: 50%;
     display: inline-block;
     border-radius: 8px;
     display: none;
-           font-family: likefive;
-         font-size: 2.5em;
+    font-family: likefive;
+    font-size: 2.5em;
 }
 
 /*prompts*/
@@ -440,52 +440,52 @@ top: 50%;
 }
 
 .word {
-        font-family: likefive;
-     font-size: 3em;
-        letter-spacing: -2px;
+    font-family: likefive;
+    font-size: 3em;
+    letter-spacing: -2px;
     background: #399bff;
-top: 50%;
+    top: 50%;
     left: 50%; 
     position: fixed;
     transform: translate(-50%, -50%);
     text-align: center;
     padding-top: 50px;
-        padding-bottom: 40px;
-        padding-right: 50px;
-        padding-left: 50px;
+    padding-bottom: 40px;
+    padding-right: 50px;
+    padding-left: 50px;
     border-radius: 10px;
 }
 
 #timer {
-       width: 100%;
+    width: 100%;
     height: 60px;
     background-color: #ffd139;
-      position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
     text-align: center;
     display: none;
-    
+
 }
 
 #timer-div {
-            display: flex;
+    display: flex;
     align-items: center;
     justify-content: center; 
     height: 60px;
 }
 
 #single-word {
-        font-family: likefive;
-         font-size: 1.5em;
+    font-family: likefive;
+    font-size: 1.5em;
     padding-right: 10px;
 }
 
 #time-remaining {
-        font-family: likefive;
-         font-size: 1.5em;
-        padding-right: 10px;
+    font-family: likefive;
+    font-size: 1.5em;
+    padding-right: 10px;
 }
 
 #endscreen {
@@ -504,6 +504,19 @@ top: 50%;
 
 #confirmbox {
     display: none;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    left: 50%; 
+    position: fixed;
+    transform: translate(-50%, -50%);
+    background-color: #ffd139;
+}
+
+#confirm {
+    display: none;
+    height: 100%;
+    background-color: #ffd139;
 }
 
 * {
@@ -516,18 +529,18 @@ top: 50%;
 
 #done {
     outline: none;
-     font-family: likefive;
+    font-family: likefive;
 }
 
 
 #endscreen {
     width: 100%;
     text-align: center;
-top: 50%;
+    top: 50%;
     left: 50%; 
     position: fixed;
     transform: translate(-50%, -50%);
-  background-color: #ffd139;
+    background-color: #ffd139;
 }
 
 #end {
@@ -556,22 +569,22 @@ top: 50%;
 }
 
 #end-cancel {
-     font-family: likefive;
+    font-family: likefive;
 }
 
 #end-submit {
-     font-family: likefive;
+    font-family: likefive;
 }
 
 #end-confirm {
-     font-family: likefive;
+    font-family: likefive;
 }
 
 #imgtable {
-        margin-left:auto; 
+    margin-left:auto; 
     margin-right:auto;
-        text-align: center;
-         font-family: likefive;
+    text-align: center;
+    font-family: likefive;
 }
 
 
@@ -602,11 +615,11 @@ top: 50%;
 #refscreen {
     width: 100%;
     text-align: center;
-top: 50%;
+    top: 50%;
     left: 50%; 
     position: fixed;
     transform: translate(-50%, -50%);
-  background-color: #ffd139;
+    background-color: #ffd139;
 }
 
 #ref {
@@ -616,8 +629,10 @@ top: 50%;
 }
 
 #reftable {
-        margin-left:auto; 
+    margin-left:auto; 
     margin-right:auto;
-        text-align: center;
-         font-family: likefive;
+    text-align: center;
+    font-family: likefive;
 }
+
+button:focus {outline:0;}

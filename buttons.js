@@ -336,6 +336,7 @@ var blinkinterval;
 var remainingprompt = 2; 
 var drawnimages = [];
 var interval;
+var blinksound = new Audio("assets/alarm.mp3"); // buffers automatically when created
 //execute this function every 1000 millisec then update the display
 var remainingtime = startremainingtime;
 function countdown () {
@@ -346,9 +347,12 @@ function countdown () {
             clearInterval (blinkinterval);
             $('#time-remaining').removeClass('hide');
             $('#time-remaining').removeClass('redtext');
+                        blinksound.pause();
             save ();
         } else if (remainingtime == blinkthreshold) {
             $('#time-remaining').addClass('redtext');
+            blinksound.play();
+                        blinksound.loop = true;
             blinkinterval = setInterval (function () {
                 $('#time-remaining').toggleClass('hide');
             }, 100);
@@ -503,3 +507,12 @@ document.getElementById ("ref-back").onclick = function (){
         document.getElementById ("refimage-"+i).src = "";
     }
 }
+
+  var audiosetA = new Array ();
+      audiosetA[0] = new Audio();
+      audiosetA[0].src = 'assets/song1.mp3';
+      audiosetA[1] = new Audio();
+      audiosetA[1].src = 'assets/song2.mp3';
+
+
+    audiosetA[Math.floor((Math.random() * 2) + 0)].play();

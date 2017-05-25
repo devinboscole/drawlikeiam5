@@ -1,17 +1,19 @@
 <html>
+    <!--    HEAD ----------------------------------------------------------------->
     <head>
         <title>Draw Like I'm Five</title>
         <link rel="icon" href="assets/icon.gif" type="image/gif" sizes="16x16">
         <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
+    <!--    BODY------------------------------------------------------------------>
     <body>
         <button class="about" id="about">?</button>
         <button class="aboutback" id="aboutback">X</button>
 
         <div id="screen1">
             <!--          <div class="screen1-text">-->
-            <span id="sc1-header"><p>Draw Like I Am Five</p></span>
+            <span id="sc1-header"><p>Draw Like I'm Five</p></span>
             <br>
             <span id="sc1-subheader"><p>choose a buddy</p></span>
             <!--              <div>-->
@@ -52,31 +54,33 @@
                 <br>
             </div>
         </div>
-        <div id="confirmbox">
-            <span id="end-confirm-text"><p>All your drawings have been submitted.</p></span>
-            <button class="end-confirm" id="end-confirm"></button>
+        <div id="confirm">
+            <div id="confirmbox">
+                <span id="end-confirm-text"><p>All your drawings have been submitted.</p></span>
+                <button class="end-confirm" id="end-confirm"></button>
+            </div>
         </div>
-        
-<!--    screen for reference images -->
+
+        <!--    screen for reference images -->
         <div id="ref">
-        <div id="refscreen">
-                       <span id="end-header"><p>Previously drawn images for <span id="refword"></span></p></span>
+            <div id="refscreen">
+                <span id="end-header"><p>Previously drawn images for <span id="refword"></span></p></span>
                 <br>
-             <table id="reftable"><tr>       <td id="ref-td-1"><img id="refimage-0"></td>
-                        <td id="ref-td-2"><img id="refimage-1"></td>
-                        <td id="ref-td-3"><img id="refimage-2"></td>
-                        </tr>
+                <table id="reftable"><tr>       <td id="ref-td-1"><img id="refimage-0"></td>
+                    <td id="ref-td-2"><img id="refimage-1"></td>
+                    <td id="ref-td-3"><img id="refimage-2"></td>
+                    </tr>
 
 
-                        <tr>       <td><img id="refimage-3"></td>
-                            <td><img id="refimage-4"></td>
-                            <td><img id="refimage-5"></td>
-                        </tr>
+                    <tr>       <td><img id="refimage-3"></td>
+                        <td><img id="refimage-4"></td>
+                        <td><img id="refimage-5"></td>
+                    </tr>
 
-                    </table>
-             <button class="ref-back" id="ref-back">BACK</button>
-        
-        </div>
+                </table>
+                <button class="ref-back" id="ref-back">BACK</button>
+
+            </div>
         </div>
 
 
@@ -129,6 +133,21 @@
             <div id="point"></div>
             <nav id="tools"></nav>
             <script src="jquery-3.2.1.min.js"></script>
+<!--
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    //Disable cut copy paste
+                    $('body').bind('cut copy paste', function (e) {
+                        e.preventDefault();
+                    });
+
+                    //Disable mouse right click
+                    $("body").on("contextmenu",function(e){
+                        return false;
+                    });
+                });
+            </script>
+-->
             <script src="surface.js"></script>
             <!--point.js contains point related functions-->
             <script src="point.js"></script>
@@ -142,5 +161,10 @@
             <script src="tool_restart.js"></script>
             <script src="buttons.js"></script>
         </div>
+<!--
+        <audio autoplay="autoplay" loop>
+            <source src="assets/song1.mp3" />     
+        </audio>
+-->
     </body>
 </html>
