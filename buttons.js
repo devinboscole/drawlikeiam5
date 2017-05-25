@@ -422,7 +422,8 @@ document.getElementById ("end-submit").onclick = function (){
             console.log(o);
             submitcount +=1;
             if (submitcount == 3) {
-                document.getElementById ("confirmbox").style.display = "block";
+                document.getElementById ("confirm").style.display = "block";
+                               document.getElementById ("confirmbox").style.display = "block";
                 document.getElementById ("endscreen").style.display = "none";
                 document.getElementById ("end").style.display = "none";
             } 
