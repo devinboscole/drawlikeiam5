@@ -125,7 +125,8 @@ button {
 #coloroptions {
     display: none; 
     width: 1200px;
-    top: 50%;
+    top: 11%;
+/*    top: 50%;*/
     left: 50%; 
     position: fixed;
     transform: translate(-50%, -50%);
@@ -365,7 +366,7 @@ text-align: center;
 
 #sc1-header {
     font-family: likefive;
-    font-size: 6em;
+    font-size: 5.5em;
     letter-spacing: -2px;
     color: black;
     text-align: center;
@@ -493,13 +494,31 @@ p {
 }
 
 #endimage-1 {
-    width: 200px;
+    width: 350px;
+    margin: 15px;
+        border-radius: 10px;
 }
 #endimage-2{
-    width: 200px;
+    width: 350px;
+        margin: 15px;
+        border-radius: 10px;
 }
 #endimage-3 {
-    width: 200px;
+    width: 350px;
+        margin: 15px;
+        border-radius: 10px;
+}
+
+#imgcap-1 {
+      font-size: 1.5em; 
+}
+
+#imgcap-2 {
+       font-size: 1.5em;
+}
+
+#imgcap-3 {
+       font-size: 1.5em;
 }
 
 #confirmbox {
@@ -549,6 +568,21 @@ p {
     background-color: #ffd139;
 }
 
+#end-para {
+        font-family: likefive;
+    font-size: 2.5em;
+    letter-spacing: -2px;
+}
+
+#end-header {
+        font-family: likefive;
+    font-size: 4em;
+    letter-spacing: -2px;
+}
+
+#endimages {
+    margin: 20px;
+}
 #endimage-1{
     background-color: white;
 }
@@ -570,14 +604,29 @@ p {
 
 #end-cancel {
     font-family: likefive;
+    width: 100px;
+    height: 60px;
+    font-size: 1.2em;
 }
 
 #end-submit {
     font-family: likefive;
+        width: 100px;
+    height: 60px;
+    font-size: 1.2em;
 }
 
 #end-confirm {
     font-family: likefive;
+        width: 100px;
+    height: 60px;
+    font-size: 1.2em;
+}
+
+#end-confirm-text{
+    font-family: likefive;
+        font-size: 2.5em;
+    letter-spacing: -2px;
 }
 
 #imgtable {
@@ -633,6 +682,13 @@ p {
     margin-right:auto;
     text-align: center;
     font-family: likefive;
+}
+
+#ref-back {
+        font-family: likefive;
+        width: 100px;
+    height: 60px;
+    font-size: 1.2em;
 }
 
 button:focus {outline:0;}

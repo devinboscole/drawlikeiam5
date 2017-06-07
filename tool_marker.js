@@ -111,55 +111,55 @@ tools.line_marker.onmousemove = function(e) {
   for (var i = 0; i < dist; i++) {
     x = lastPoint.x + (Math.sin(angle) * i) - 25;
     y = lastPoint.y + (Math.cos(angle) * i) - 25;
-   if (thickness == 1 && color == "#0f0f0f") {
+   if (thickness == 14 && color == "#0f0f0f") {
        ctx.drawImage(marker1, x, y);
    } else if (thickness == 5 && color == "#0f0f0f") {
               ctx.drawImage(marker2, x, y);
    } else if (thickness == 25 && color == "#0f0f0f") {
               ctx.drawImage(marker3, x, y);
-   } else if (thickness == 1 && color == "#ffffff") {
+   } else if (thickness == 14 && color == "#ffffff") {
             ctx.drawImage(markerwhite1, x, y);
    } else if (thickness == 5 && color == "#ffffff") {
             ctx.drawImage(markerwhite2, x, y);
    } else if (thickness == 25 && color == "#ffffff") {
             ctx.drawImage(markerwhite3, x, y);
-   } else if (thickness == 1 && color == "#7302b5") {
+   } else if (thickness == 14 && color == "#7302b5") {
             ctx.drawImage(markerpurple1, x, y);
    } else if (thickness == 5 && color == "#7302b5") {
             ctx.drawImage(markerpurple2, x, y);
    } else if (thickness == 25 && color == "#7302b5") {
             ctx.drawImage(markerpurple3, x, y);
-   } else if (thickness == 1 && color == "#1259d8") {
+   } else if (thickness == 14 && color == "#1259d8") {
             ctx.drawImage(markerblue1, x, y);
    } else if (thickness == 5 && color == "#1259d8") {
             ctx.drawImage(markerblue2, x, y);
    } else if (thickness == 25 && color == "#1259d8") {
             ctx.drawImage(markerblue3, x, y);
-   } else if (thickness == 1 && color == "#27ea4b") {
+   } else if (thickness == 14 && color == "#27ea4b") {
             ctx.drawImage(markergreen1, x, y);
    } else if (thickness == 5 && color == "#27ea4b") {
             ctx.drawImage(markergreen2, x, y);
    } else if (thickness == 25 && color == "#27ea4b") {
             ctx.drawImage(markergreen3, x, y);
-   } else if (thickness == 1 && color == "#fff927") {
+   } else if (thickness == 14 && color == "#fff927") {
             ctx.drawImage(markeryel1, x, y);
    } else if (thickness == 5 && color == "#fff927") {
             ctx.drawImage(markeryel2, x, y);
    } else if (thickness == 25 && color == "#fff927") {
             ctx.drawImage(markeryel3, x, y);
-   } else if (thickness == 1 && color == "#ff9600") {
+   } else if (thickness == 14 && color == "#ff9600") {
             ctx.drawImage(markerorange1, x, y);
    } else if (thickness == 5 && color == "#ff9600") {
             ctx.drawImage(markerorange2, x, y);
    } else if (thickness == 25 && color == "#ff9600") {
             ctx.drawImage(markerorange3, x, y);
-   } else if (thickness == 1 && color == "#ff1212") {
+   } else if (thickness == 14 && color == "#ff1212") {
             ctx.drawImage(markerred1, x, y);
    } else if (thickness == 5 && color == "#ff1212") {
             ctx.drawImage(markerred2, x, y);
    } else if (thickness == 25 && color == "#ff1212") {
             ctx.drawImage(markerred3, x, y);
-   } else if (thickness == 1 && color == "#ff33b6") {
+   } else if (thickness == 14 && color == "#ff33b6") {
             ctx.drawImage(markerpink1, x, y);
    } else if (thickness == 5 && color == "#ff33b6") {
             ctx.drawImage(markerpink2, x, y);
