@@ -621,6 +621,7 @@ p {
         width: 100px;
     height: 60px;
     font-size: 1.2em;
+        margin: 25px;
 }
 
 #end-confirm-text{
@@ -639,26 +640,38 @@ p {
 
 #refimage-0 {
     width: 200px;
+    background-color: white;
+    border-radius: 8px;
 }
 
 #refimage-1 {
     width: 200px;
+        background-color: white;
+    border-radius: 8px;
 }
 
 #refimage-2 {
     width: 200px;
+        background-color: white;
+    border-radius: 8px;
 }
 
 #refimage-3 {
     width: 200px;
+        background-color: white;
+    border-radius: 8px;
 }
 
 #refimage-4 {
     width: 200px;
+        background-color: white;
+    border-radius: 8px;
 }
 
 #refimage-5 {
     width: 200px;
+        background-color: white;
+    border-radius: 8px;
 }
 
 #refscreen {
@@ -682,6 +695,7 @@ p {
     margin-right:auto;
     text-align: center;
     font-family: likefive;
+    margin-bottom: 20px;
 }
 
 #ref-back {
