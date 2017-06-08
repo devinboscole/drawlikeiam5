@@ -24,6 +24,7 @@ tools.line_eraser.onmouseup = function() {
 };
 
 tools.line_eraser.button = document.createElement('button');
+tools.line_eraser.button.id = "tool_eraser";
 tools.line_eraser.button.dataset.tool = 'line_eraser';
 tools.line_eraser.button.innerHTML = '&nbsp;';
 menu.appendChild(tools.line_eraser.button);

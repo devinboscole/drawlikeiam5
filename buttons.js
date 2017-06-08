@@ -38,6 +38,16 @@ $( document ).ready(function() {
     $(".buddybutton3").css("background-image", buddyimage3[0]);
 });
 
+var reset_button_styles = function () {
+    document.getElementById("tool_pencil").style.backgroundImage = "url('assets/button1.png')";
+    document.getElementById("tool_marker").style.backgroundImage = "url('assets/button2.png')";
+    document.getElementById("tool_crayon").style.backgroundImage = "url('assets/button3.png')";
+    document.getElementById("tool_eraser").style.backgroundImage = "url('assets/button4.png')";
+    document.getElementById("tool_clear").style.backgroundImage = "url('assets/button5.png')";
+    document.getElementById("tool_color").style.backgroundImage = "url('assets/button8.png')";
+    // repeat for all other buttons
+}
+
 var switch_tool = function (name) {
     if (name != "line_thickness" && name !="line_color" && name !="line_coloring"){
         tool = tools[name];
@@ -63,7 +73,11 @@ var switch_tool = function (name) {
 
         ctx.globalCompositeOperation = "source-over";
         ctx.lineJoin = ctx.lineCap = 'round';
-        return; //this is one possible end point, if hit this point return 
+
+        reset_button_styles();
+        document.getElementById("tool_pencil").style.backgroundImage = "url('assets/button1toggle.png')";
+
+        return; //this is one possible end point, if hit this point retun 
     } else {
         point.style.display = "none";
     }
@@ -85,7 +99,8 @@ var switch_tool = function (name) {
     if (name=="line_marker"){
 
         if (buddy == "bobby") {
-
+            reset_button_styles();
+            document.getElementById("tool_marker").style.backgroundImage = "url('assets/button2toggle.png')";
             document.getElementById ("errors").style.display = "block";
             document.getElementById ("errors").innerHTML = linemarkerstory[0];
 
@@ -98,6 +113,10 @@ var switch_tool = function (name) {
             //CUSTOM THICKNESS + COLOR ============================================
             ctx.lineJoin = ctx.lineCap = 'butt';
             ctx.globalCompositeOperation = "source-over";
+
+            // so we reset everything else (including pencil), and set marker accordingly in here
+            reset_button_styles();
+            document.getElementById("tool_marker").style.backgroundImage = "url('assets/button2toggle.png')";
             return;
         }
     } else {
@@ -115,6 +134,8 @@ var switch_tool = function (name) {
 
         ctx.lineJoin = ctx.lineCap = 'butt';
         ctx.globalCompositeOperation = "source-over";
+        reset_button_styles();
+        document.getElementById("tool_crayon").style.backgroundImage = "url('assets/button3toggle.png')";
         return;
     } else {
         point.style.display = "none";
@@ -122,6 +143,8 @@ var switch_tool = function (name) {
 
     if (name == "line_eraser"){
         if (buddy == "stacy") {
+            reset_button_styles();
+            document.getElementById("tool_eraser").style.backgroundImage = "url('assets/button4toggle.png')";
 
             document.getElementById ("errors").style.display = "block";
             document.getElementById ("errors").innerHTML = "<span class=\"errormsg\">You don't have an erasor because you lent it to morgan and he never gave it back.</span>";
@@ -134,6 +157,8 @@ var switch_tool = function (name) {
             ctx.strokeStyle = "rgba(255,255,255,1)";
             ctx.globalCompositeOperation = "destination-out";
             ctx.lineJoin = ctx.lineCap = 'round';
+            reset_button_styles();
+            document.getElementById("tool_eraser").style.backgroundImage = "url('assets/button4toggle.png')";
             return;
         }
     } else {
@@ -142,13 +167,16 @@ var switch_tool = function (name) {
 
     if (name == "line_clear"){
         if (buddy == "stacy") {
-
+            reset_button_styles();
+            document.getElementById("tool_clear").style.backgroundImage = "url('assets/button5toggle.png')";
             document.getElementById ("errors").style.display = "block";
             document.getElementById ("errors").innerHTML = "<span class=\"errormsg\">You don't want to clear anithing because Ms.H said you are perfect. Perfect peeple do not make mistakes.</span>";
 
         } else {
             ctx.clearRect(0, 0, can.width, can.height);
             curPage = "";
+            reset_button_styles();
+            document.getElementById("tool_clear").style.backgroundImage = "url('assets/button5toggle.png')";
             return;
         }
     } else {
@@ -188,6 +216,8 @@ var switch_tool = function (name) {
             point.style.display = "block";
             //    ctx.globalCompositeOperation = "source-over";
             document.getElementById ("coloroptions").style.display = "block";
+            reset_button_styles();
+            document.getElementById("tool_color").style.backgroundImage = "url('assets/button8toggle.png')";
             return;
         } else if (buddy == "bobby") {
             document.getElementById ("red").style.display = "initial";
@@ -196,6 +226,8 @@ var switch_tool = function (name) {
             point.style.display = "block";
             //    ctx.globalCompositeOperation = "source-over";
             document.getElementById ("coloroptions").style.display = "block";
+            reset_button_styles();
+            document.getElementById("tool_color").style.backgroundImage = "url('assets/button8toggle.png')";
             return;
         } else if (buddy == "bob") {
             document.getElementById ("pink").style.display = "initial";
@@ -207,6 +239,8 @@ var switch_tool = function (name) {
             point.style.display = "block";
             //    ctx.globalCompositeOperation = "source-over";
             document.getElementById ("coloroptions").style.display = "block";
+            reset_button_styles();
+            document.getElementById("tool_color").style.backgroundImage = "url('assets/button8toggle.png')";
             return;
         }
     } else {
@@ -374,14 +408,14 @@ function save () {
     document.getElementById ("timer").style.display = "none";
     ctx.clearRect(0, 0, can.width, can.height);
     clearInterval(interval);
-    
-//added 6/7 to address beeping alarm when pressed done
-                clearInterval (blinkinterval);
-            $('#time-remaining').removeClass('hide');
-            $('#time-remaining').removeClass('redtext');
-            blinksound.pause();
-//added 6/7 to address beeping alarm when pressed done
-    
+
+    //added 6/7 to address beeping alarm when pressed done
+    clearInterval (blinkinterval);
+    $('#time-remaining').removeClass('hide');
+    $('#time-remaining').removeClass('redtext');
+    blinksound.pause();
+    //added 6/7 to address beeping alarm when pressed done
+
     if (remainingprompt > 0) {
         wordstate = "start";
         showprompt ();

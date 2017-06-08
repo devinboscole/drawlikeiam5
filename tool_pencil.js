@@ -55,6 +55,7 @@ tools.line_pencil.onmouseup = function() {
 };
 
 tools.line_pencil.button = document.createElement('button');
+tools.line_pencil.button.id = "tool_pencil";
 tools.line_pencil.button.dataset.tool = 'line_pencil';
 tools.line_pencil.button.innerHTML = '&nbsp;';
 menu.appendChild(tools.line_pencil.button);

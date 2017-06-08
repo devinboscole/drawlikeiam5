@@ -17,6 +17,7 @@ tools.line_clear.onmouseup = function() {
 };
 
 tools.line_clear.button = document.createElement('button');
+tools.line_clear.button.id = "tool_clear";
 tools.line_clear.button.dataset.tool = 'line_clear';
 tools.line_clear.button.innerHTML = '&nbsp;';
 menu.appendChild(tools.line_clear.button);

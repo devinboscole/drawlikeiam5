@@ -49,6 +49,7 @@ tools.line_color.click = function (e) {
 };
 
 tools.line_color.button = document.createElement('button');
+tools.line_color.button.id = "tool_color";
 tools.line_color.button.dataset.tool = 'line_color';
 tools.line_color.button.innerHTML = '&nbsp;';
 menu.appendChild(tools.line_color.button);

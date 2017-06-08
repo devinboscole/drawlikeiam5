@@ -184,6 +184,7 @@ tools.line_marker.onmouseup = function() {
 };
 
 tools.line_marker.button = document.createElement('button');
+tools.line_marker.button.id = "tool_marker";
 tools.line_marker.button.dataset.tool = 'line_marker';
 tools.line_marker.button.innerHTML = '&nbsp;';
 menu.appendChild(tools.line_marker.button);

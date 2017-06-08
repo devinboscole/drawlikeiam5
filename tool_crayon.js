@@ -60,6 +60,7 @@ tools.line_crayon.onmouseup = function() {
 };
 
 tools.line_crayon.button = document.createElement('button');
+tools.line_crayon.button.id = "tool_crayon";
 tools.line_crayon.button.dataset.tool = 'line_crayon';
 tools.line_crayon.button.innerHTML = '&nbsp;';
 menu.appendChild(tools.line_crayon.button);
