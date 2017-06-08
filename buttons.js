@@ -420,7 +420,7 @@ var submitcount = 0;
 var submitClicked = false;
 
 document.getElementById ("end-submit").onclick = function (){
-    if (submitClicked === false) {
+    if (submitClicked === true) {
         // here you can also make it console log something, or pop up a message saying "you've already clicked submit"
         console.log("submission in progress!");
         return;
