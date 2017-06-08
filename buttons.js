@@ -26,7 +26,7 @@ function shuffle(array) {
     return array;
 }
 
-var linemarkerstory = shuffle(["<span class=\"errormsg\">You do not have a marker because you threw it awey. Kim touhed it and she has cooties because she is a gril.</span>", "<span class=\"errormsg\">Missing marker. You lost it somewhere.</span>", "<span class=\"errormsg\">You gave Joe your marker becuase he is nice. He is your bestfrend.</span>"]); 
+var linemarkerstory = shuffle(["<span class=\"errormsg\">You do not have a marker because you threw it awey. Kim touhed it and she has cooties because she is a gril. Pick another drawing tool!</span>", "<span class=\"errormsg\">Missing marker. You lost it somewhere. Pick another drawing tool!</span>", "<span class=\"errormsg\">You gave Joe your marker becuase he is nice. He is your bestfrend. Pick another drawing tool!</span>"]); 
 
 var buddyimage1 = shuffle(["url(assets/buddy2.png)", "url(assets/buddy2-b.png)", "url(assets/buddy2-c.png)", "url(assets/buddy2-d.png)", "url(assets/buddy2-e.png)"]);
 var buddyimage2 = shuffle(["url(assets/buddy1.png)", "url(assets/buddy1-b.png)", "url(assets/buddy1-c.png)", "url(assets/buddy1-d.png)", "url(assets/buddy1-e.png)"]);
@@ -124,7 +124,7 @@ var switch_tool = function (name) {
         if (buddy == "stacy") {
 
             document.getElementById ("errors").style.display = "block";
-            document.getElementById ("errors").innerHTML = "<span class=\"errormsg\">You don't have an erasor because you lent it to morgan and he never gave it back. You don't want to merry morgan anymore because he is a liar and you deseve better.</span>";
+            document.getElementById ("errors").innerHTML = "<span class=\"errormsg\">You don't have an erasor because you lent it to morgan and he never gave it back. Pick another drawing tool!</span>";
 
         } else {
             point.style.display = "block";
@@ -144,7 +144,7 @@ var switch_tool = function (name) {
         if (buddy == "stacy") {
 
             document.getElementById ("errors").style.display = "block";
-            document.getElementById ("errors").innerHTML = "<span class=\"errormsg\">You don't want to clear anithing because Ms.H said you are perfect. Perfect peeple do not make mistakes.</span>";
+            document.getElementById ("errors").innerHTML = "<span class=\"errormsg\">You don't want to clear anithing because Ms.H said you are perfect. Perfect peeple do not make mistakes. Pick another drawing tool!</span>";
 
         } else {
             ctx.clearRect(0, 0, can.width, can.height);
@@ -159,7 +159,7 @@ var switch_tool = function (name) {
         if (buddy == "bobby") {
 
             document.getElementById ("errors").style.display = "block";
-            document.getElementById ("errors").innerHTML = "<span class=\"errormsg\">You dont hav any stickers left because you gave them to Joe. He is your bestfrend.</span>";
+            document.getElementById ("errors").innerHTML = "<span class=\"errormsg\">You dont hav any stickers left because you gave them to Joe. He is your bestfrend!</span>";
 
         } else {
             point.style.display = "none";
@@ -306,7 +306,7 @@ document.getElementById ("errors").onclick = function (){
 // Used like so
 //array for drawing prompts 
 //var prompts = shuffle(["fish", "cat", "hat", "rat", "dog", "bird", "water", "shirt", "pants", "shoes", "car", "truck", "bus", "mom", "dad", "box", "bike", "comb", "bee", "desk", "baby", "banana", "snake", "cow", "duck", "rabbit", "chicken", "fire", "earth", "sun", "moon", "apple", "bear", "cake", "chair", "corn", "feet", "milk", "money", "sheep", "love", "dress", "sofa", "fork", "spoon", "plane", "meat", "star", "computer", "book", "train"]);
-var prompts = shuffle(["a cat", "a hat", "a bear", "a dog", "a bee", "a castle", "a tree", "a cow", "a duck", "a sofa", "the earth", "the sun", "the moon", "an apple", "a sheep", "love", "a plane", "a frog", "a computer", "a train"]);
+var prompts = shuffle(["a cat", "a bear", "a dog", "a castle", "a tree", "a cow", "a duck", "a sofa", "the earth", "an apple", "a sheep", "a plane", "a frog", "a computer", "a train"]);
 console.log (prompts);
 
 var currentpromptindex = 0;

@@ -101,6 +101,12 @@ button {
     background-color: #ff274b;
 }
 
+/*
+[data-tool=line_eraser]:hover {
+outline: green dotted thick;
+}
+*/
+
 #point {
     position: absolute;
     top: 0px;
@@ -317,6 +323,20 @@ button {
     border-radius: 8px
 }
 
+/*new css added final*/
+
+.buddybutton1:hover {
+box-shadow:  0 0 0 10px #ffc039;
+}
+
+.buddybutton2:hover {
+box-shadow:  0 0 0 10px #ffc039;
+}
+
+.buddybutton3:hover {
+box-shadow:  0 0 0 10px #ffc039;
+}
+
 .buddybutton2 {
     width: 300px;
     height: 250px;
@@ -435,6 +455,14 @@ p {
     font-size: 2.5em;
 }
 
+#about:hover {
+    background-color: #f3244b;
+}
+
+#aboutback:hover {
+    background-color: #f3244b;
+}
+
 /*prompts*/
 #prompts {
     display: none; 
@@ -498,6 +526,19 @@ p {
     margin: 15px;
         border-radius: 10px;
 }
+
+#endimage-1:hover {
+    box-shadow:  0 0 0 8px #ffc039;
+}
+
+#endimage-2:hover {
+    box-shadow:  0 0 0 8px #ffc039;
+}
+
+#endimage-3:hover {
+    box-shadow:  0 0 0 8px #ffc039;
+}
+
 #endimage-2{
     width: 350px;
         margin: 15px;
@@ -549,7 +590,15 @@ p {
 #done {
     outline: none;
     font-family: likefive;
+            background-color: #399bff;
+
 }
+
+/*
+#done:hover {
+    background-color: #4caf50;
+}
+*/
 
 
 #endscreen {
@@ -607,6 +656,12 @@ p {
     width: 100px;
     height: 60px;
     font-size: 1.2em;
+        background-color: #399bff;
+}
+
+#end-cancel:hover {
+
+        background-color: #4caf50;
 }
 
 #end-submit {
@@ -614,6 +669,11 @@ p {
         width: 100px;
     height: 60px;
     font-size: 1.2em;
+            background-color: #399bff;
+}
+
+#end-submit:hover {
+      background-color: #4caf50;
 }
 
 #end-confirm {
@@ -622,6 +682,11 @@ p {
     height: 60px;
     font-size: 1.2em;
         margin: 25px;
+            background-color: #399bff;
+}
+
+#end-confirm:hover {
+      background-color: #4caf50;
 }
 
 #end-confirm-text{
@@ -640,36 +705,42 @@ p {
 
 #refimage-0 {
     width: 200px;
+    height: 120px;
     background-color: white;
     border-radius: 8px;
 }
 
 #refimage-1 {
     width: 200px;
+        height: 120px;
         background-color: white;
     border-radius: 8px;
 }
 
 #refimage-2 {
     width: 200px;
+        height: 120px;
         background-color: white;
     border-radius: 8px;
 }
 
 #refimage-3 {
     width: 200px;
+        height: 120px;
         background-color: white;
     border-radius: 8px;
 }
 
 #refimage-4 {
     width: 200px;
+        height: 120px;
         background-color: white;
     border-radius: 8px;
 }
 
 #refimage-5 {
     width: 200px;
+        height: 120px;
         background-color: white;
     border-radius: 8px;
 }
@@ -695,7 +766,7 @@ p {
     margin-right:auto;
     text-align: center;
     font-family: likefive;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 #ref-back {
@@ -703,6 +774,11 @@ p {
         width: 100px;
     height: 60px;
     font-size: 1.2em;
+            background-color: #399bff;
+}
+
+#ref-back:hover {
+      background-color: #4caf50;
 }
 
 button:focus {outline:0;}

@@ -1,4 +1,6 @@
-
+body {
+    overflow: hidden;
+}
 div.gallery {
     border: 0px solid #ccc;
 }
