@@ -47,3 +47,7 @@ div.desc {
     display: table;
     clear: both;
 }
+
+table {
+    margin-top: 25px;
+}
