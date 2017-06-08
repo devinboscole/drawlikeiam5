@@ -417,8 +417,14 @@ document.getElementById ("end-cancel").onclick = function (){
 
 var submitcount = 0;
 
-document.getElementById ("end-submit").onclick = function (){
+var submitClicked = false;
 
+document.getElementById ("end-submit").onclick = function (){
+    if (submitClicked === false) {
+        // here you can also make it console log something, or pop up a message saying "you've already clicked submit"
+        console.log("submission in progress!");
+        return;
+    }
     for (var i=0; i < 3; i++) {    
         $.ajax({
             type: "POST",
@@ -444,6 +450,7 @@ document.getElementById ("end-submit").onclick = function (){
             // and than put the image in your browser.
         });
     }
+    submitClicked = true;
 }
 
 document.getElementById ("end-confirm").onclick = function (){
