@@ -16,7 +16,7 @@ if ($handle = opendir('./images')) {
     // sort
     krsort($files);
 
-    $length = min (220, count($files));
+    $length = min (340, count($files));
     if ($length > 0) {
         reset($files);
 $timestamp = key($files);
